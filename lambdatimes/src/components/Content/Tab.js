@@ -3,18 +3,15 @@ import React from 'react';
 const Tab = props => {
   let changeClassName = '';
   if (props.tab === props.selectedTab) {
-    changeClassName ='tab active-tab'
+    changeClassName ='tab active-tab';
   } else {
-     changeClassName = 'tab'
+     changeClassName = 'tab';
   }
 
   return (
     <div
       className={changeClassName}
-      onClick={() => {
-       props.selecTabHandler(props.tab)
-      }}
-    >
+      onClick={() => props.selectTabHandler(props.tab)}>
       {props.tab.toUpperCase()}
     </div>
   );
