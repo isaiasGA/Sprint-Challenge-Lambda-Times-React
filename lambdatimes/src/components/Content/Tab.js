@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
   let changeClassName = '';
@@ -17,9 +18,13 @@ const Tab = props => {
   );
 };
 
-// Make sure you include PropTypes on your props.
+Tab.propTypes = {
+    tab: PropTypes.string,
+}
 
 export default Tab;
+
+// Make sure you include PropTypes on your props.
 
 
  /* Replace this dummy click handler function with your selectTabHandler function from props 

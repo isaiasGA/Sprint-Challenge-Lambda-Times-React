@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Tab from './Tab';
 
 const Tabs = props => {
@@ -9,7 +10,7 @@ const Tabs = props => {
         {props.tabs.map(tab => {
           return (
             <Tab
-              key={tab.index} 
+              key={tab.id} 
               selectTabHandler={props.selectTabHandler}
               selectedTab={props.selectTab}
               tab={tab}
@@ -17,6 +18,16 @@ const Tabs = props => {
         )})}
       </div>
     </div>
+  )
+}
+
+Tabs.propTypes = {
+  tab: PropTypes.arrayOf(
+    PropTypes.shape({
+      selectTabHandler:PropTypes.func,
+      selectedTab: PropTypes.array,
+      tab: PropTypes.object
+    })
   )
 }
 
