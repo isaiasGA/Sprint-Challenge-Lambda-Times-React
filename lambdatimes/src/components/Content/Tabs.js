@@ -6,20 +6,19 @@ const Tabs = props => {
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
-        {props.tabs.map(tab=> {
-          return(
+        {props.tabs.map(tab => {
+          return (
             <Tab
-              key={tab.id} 
+              key={tab.index} 
               selectTabHandler={props.selectTabHandler}
               selectedTab={props.selectTab}
               tab={tab}
             />
-          )
-        })}
+        )})}
       </div>
     </div>
-  );
-};
+  )
+}
 
 // Make sure to use PropTypes to validate your types!
 export default Tabs;
